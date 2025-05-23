@@ -1,6 +1,8 @@
 const mongoose=require("mongoose");
+const dotenv=require("dotenv");
+dotenv.config();
 const connectDB=async()=>{
-    await mongoose.connect("mongodb+srv://csb22056:0W7QHygGvNdBUzgO@rpfs.7ykuzqf.mongodb.net/");
+    await mongoose.connect(process.env.MONGO_URL);
 };
 
 

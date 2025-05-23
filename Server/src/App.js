@@ -6,8 +6,8 @@ const connectDB=require('./config/db');
 connectDB()
   .then(() => {
     console.log("Database is connected");
-    app.listen(4444, () => {
-      console.log("Server is successfully listening to port "+ 4444);
+    app.listen(process.env.PORT, () => {
+      console.log("Server is successfully listening to port "+ process.env.PORT);
     });
   })
   .catch((err) => {
